@@ -20,7 +20,7 @@ http://htk.eng.cam.ac.uk/download.shtml
 
 # Usage:
 
-You can create a model and train it using the commands in scripts_htk. The final model will be stored in the folder models/hmm10 The command will also output accuracy of the trainned model against the dataset.
+You can create a model and train it using the commands in scripts_htk or [Here](https://github.com/tawaintisuyurunakunarayku/asr_hmm/blob/master/REPORT.md). The final model will be stored in the folder models/hmm10 The command will also output accuracy of the trainned model against the dataset.
 
 # Results:
 
