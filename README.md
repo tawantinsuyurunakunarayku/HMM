@@ -28,7 +28,7 @@ You can create a model and train it using the commands in scripts_htk. The final
 
 Each step of the experiment are described  in REPORT.MD.
 
-* In order to build the Quechua Language recognation system, we need first to **prepare the data** for both training and testing. We need first to create a grammar for the system, wich will represent the chain of a spoken words beginning and ending with a silence `sil`. We will use also the [Quechua language dictionary](https://siminchikkunarayku.pe/), this dictionnary will allow to create a list of diphones representing each word. We will have also to extract the features of each recording from the `train`and `dev` datasets, using the `HCompV` command.
+* In order to build the Quechua Language recognation system, we need first to [Prepare the data](https://drive.google.com/drive/u/0/folders/1fHwoLwzGrpomTLvOfxhhxFf1WR_o5Yf2) for both training and testing. We need first to create a grammar for the system, wich will represent the chain of a spoken words beginning and ending with a silence `sil`. We will use also the [Quechua language dictionary](https://siminchikkunarayku.pe/), this dictionnary will allow to create a list of diphones representing each word. We will have also to extract the features of each recording from the `train`and `dev` datasets, using the `HCompV` command.
 
 * In a second time, we will train a **diphone** Hidden Markov Model. The model will be re-estimate after introducing short pauses into the transcription in order to increase it's accuracy. We will also use the `HVite` command to align the phones with the training data.
 
