@@ -7,7 +7,7 @@ The main object objectif of the project is to build a Quechua language recognati
 Before jumping into the explaination of the experiment, it's important to understand the code-structure of the project:
 
 ```
-  ├── Parameter 				  # Configurations of HTK commands (.config)
+  ├── Parameter 				              # Configurations of HTK commands (.config)
   │   ├── HCompV
   │   ├── HCopy
   │   ├── HCopyTests
@@ -16,31 +16,31 @@ Before jumping into the explaination of the experiment, it's important to unders
   │	  ├── HLEd
   │   └── config
   ├── Data
-  │   ├── train                   # Initial datasets to train
+  │   ├── train                       # Initial datasets to train
   │   │   ├── wav
   │   │   ├── mfcc
   │   │   └── lab
-  │   └── test                    # Dataset to test
+  │   └── test                        # Dataset to test
   │       ├── wav
   │       ├── mfcc
   │       └── lab
-  ├── Dictionary 				  # Inital data to build phones lists and dictionary    
+  ├── Dictionary 				              # Inital data to build phones lists and dictionary    
   │   ├── dict
   │   ├── grammar
   │   ├── grammar.wordnet
   │	  ├── phones.dic
   │	  ├── phones.list
   │   └── words-sorted.list
-  ├── Labels                      # Transriptions folder (.mlf file)
-  ├── Models                      # Generated models
+  ├── Labels                          # Transriptions folder (.mlf file)
+  ├── Models                          # Generated models
   │   ├── hmm0
   │   ├── ...
   │   ├── hmm10
   │   ├── hmmlist
-  │   └── prototype               # Model template
+  │   └── prototype                   # Model template
   ├ README.md
   ├ REPORT.md
-  ├ scripts-htk                   # Script to execute trainning and testing
+  ├ scripts-htk                       # Script to execute trainning and testing
 ```
 
 # Experiement approach
@@ -89,7 +89,7 @@ Reestimate the model the model using `HERest` command 4 times.
 
 ```
 HERest -T 0 -C \parameter\HERest.config -I \data\train\train-phones.mlf -t 250.0 150.0 10000.0 -S \data\train\listMFC.txt -H \model\hmm0\macros -H \model\hmm0\hmmdefs -M \model\hmm1 \dictionary\phones.list
-HERest -T 0 -C \parameter\HERest.config -I \data\train\train-phones.mlf -t 250.0 150.0 10000.0 -S \data\train\listMFC.txt -H \model\hmm1\macros -H \hmm1\hmmdefs -M \model\hmm2 \dictionary\phones.list
+HERest -T 0 -C \parameter\HERest.config -I \data\train\train-phones.mlf -t 250.0 150.0 10000.0 -S \data\train\listMFC.txt -H \model\hmm1\macros -H \model\hmm1\hmmdefs -M \model\hmm2 \dictionary\phones.list
 HERest -T 0 -C \parameter\HERest.config -I \data\train\train-phones.mlf -t 250.0 150.0 10000.0 -S \data\train\listMFC.txt -H \model\hmm2\macros -H \model\hmm2\hmmdefs -M \model\hmm3 \dictionary\phones.list
 HERest -T 0 -C \parameter\HERest.config -I \data\train\train-phones.mlf -t 250.0 150.0 10000.0 -S \data\train\listMFC.txt -H \model\hmm3\macros -H \model\hmm3\hmmdefs -M \model\hmm4 \dictionary\phones.list
 ```
@@ -103,9 +103,9 @@ HHEd -H D:\htk\model\hmm4\macros -H D:\htk\model\hmm4\hmmdefs -M D:\htk\model\hm
 Reestimate the model 5 times using the transcription containing short pauses.
 
 ```
-HERest -T 0 -C \parameter\HERest.config -I \data\train\train-phones.mlf -t 250.0 150.0 10000.0 -S \data\train\listMFC.txt -H D:\htk\model\hmm5\macros -H \model\hmm5\hmmdefs -M \model\hmm6 \dictionary\phones.list
+HERest -T 0 -C \parameter\HERest.config -I \data\train\train-phones.mlf -t 250.0 150.0 10000.0 -S \data\train\listMFC.txt -H \model\hmm5\macros -H \model\hmm5\hmmdefs -M \model\hmm6 \dictionary\phones.list
 HERest -T 0 -C \parameter\HERest.config -I \data\train\train-phones.mlf -t 250.0 150.0 10000.0 -S \data\train\listMFC.txt -H \model\hmm6\macros -H \model\hmm6\hmmdefs -M \model\hmm7 \dictionary\phones.list
-HERest -T 0 -C \parameter\HERest.config -I \data\train\train-phones.mlf -t 250.0 150.0 10000.0 -S D:\htk\data\listMFC.txt -H D:\htk\model\hmm7\macros -H \model\hmm7\hmmdefs -M \model\hmm8 \dictionary\phones.list
+HERest -T 0 -C \parameter\HERest.config -I \data\train\train-phones.mlf -t 250.0 150.0 10000.0 -S D:\htk\data\listMFC.txt -H \model\hmm7\macros -H \model\hmm7\hmmdefs -M \model\hmm8 \dictionary\phones.list
 HERest -T 0 -C \parameter\HERest.config -I \data\train\train-phones.mlf -t 250.0 150.0 10000.0 -S \data\train\listMFC.txt -H \model\hmm8\macros -H \model\hmm8\hmmdefs -M \model\hmm9 \dictionary\phones.list
 HERest -T 0 -C \parameter\HERest.config -I \data\train\train-phones.mlf -t 250.0 150.0 10000.0 -S \data\train\listMFC.txt -H \model\hmm9\macros -H \model\hmm9\hmmdefs -M \model\hmm10 \dictionary\phones.list
 ```
