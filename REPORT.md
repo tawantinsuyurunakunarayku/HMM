@@ -105,7 +105,7 @@ Reestimate the model 5 times using the transcription containing short pauses.
 ```
 HERest -T 0 -C \parameter\HERest.config -I \data\train\train-phones.mlf -t 250.0 150.0 10000.0 -S \data\train\listMFC.txt -H \model\hmm5\macros -H \model\hmm5\hmmdefs -M \model\hmm6 \dictionary\phones.list
 HERest -T 0 -C \parameter\HERest.config -I \data\train\train-phones.mlf -t 250.0 150.0 10000.0 -S \data\train\listMFC.txt -H \model\hmm6\macros -H \model\hmm6\hmmdefs -M \model\hmm7 \dictionary\phones.list
-HERest -T 0 -C \parameter\HERest.config -I \data\train\train-phones.mlf -t 250.0 150.0 10000.0 -S D:\htk\data\listMFC.txt -H \model\hmm7\macros -H \model\hmm7\hmmdefs -M \model\hmm8 \dictionary\phones.list
+HERest -T 0 -C \parameter\HERest.config -I \data\train\train-phones.mlf -t 250.0 150.0 10000.0 -S \data\train\listMFC.txt -H \model\hmm7\macros -H \model\hmm7\hmmdefs -M \model\hmm8 \dictionary\phones.list
 HERest -T 0 -C \parameter\HERest.config -I \data\train\train-phones.mlf -t 250.0 150.0 10000.0 -S \data\train\listMFC.txt -H \model\hmm8\macros -H \model\hmm8\hmmdefs -M \model\hmm9 \dictionary\phones.list
 HERest -T 0 -C \parameter\HERest.config -I \data\train\train-phones.mlf -t 250.0 150.0 10000.0 -S \data\train\listMFC.txt -H \model\hmm9\macros -H \model\hmm9\hmmdefs -M \model\hmm10 \dictionary\phones.list
 ```
