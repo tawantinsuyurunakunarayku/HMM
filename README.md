@@ -38,9 +38,9 @@ Once the model is trained, it's possible to evaluate his preformance against the
 
 | Model | Model identifier | Correctness |
 | ----- |:----------------:| -----------:|
-| Diphones Aligned | *hmm7* | 75.48% |
-| Diphones | *hmm9* | 77.88% |
-| Diphones Tied | *hmm10* | 80.30% |
+| Monophones Aligned | *hmm7* | 75.48% |
+| Monophones | *hmm9* | 77.88% |
+| Monophones Tied | *hmm10* | 80.30% |
 
 However it should be noticed that when used the `HLEd` command show 2 warings:
 
